@@ -1,0 +1,68 @@
+.title-first
+	color: #FFFFFF
+	margin-bottom: 5rem
+
+	&__main
+		font-weight: 700
+		font-size: 5rem
+		letter-spacing: 1rem
+		line-height: 6rem
+		display: block
+		text-transform: uppercase
+		margin-bottom: 1rem
+		animation: leftToRight 2s 
+		animation-delay: 1s
+		backface-visibility: hidden
+		animation-fill-mode: backwards
+		@include respond(tab-land)
+			font-size: 4rem
+	&__secondary
+		font-size: 4rem
+		font-weight: 200
+		letter-spacing: .5rem
+		display: block
+		line-height: 4rem
+		animation: rightToLeft 2s
+		animation-delay: 1s
+		backface-visibility: hidden
+		animation-fill-mode: backwards
+		@include respond(tab-land)
+			font-size: 3.5rem
+			margin-bottom: 3.5rem
+
+.title-secondary
+	display: inline-block
+	letter-spacing: 1rem
+	font-size: 3.6rem
+	text-transform: uppercase
+	font-weight: 900
+	color: transparent
+	background: linear-gradient(90deg, rgba($color-brown-light,0.7) 4%, rgba($color-brown-dark,0.7)96%)
+	-webkit-background-clip: text
+	transition: all .4s
+	@include respond(tab-land)
+			font-size: 3rem
+	&:hover
+		transform: skewY(2deg) skewX(15deg) scale(1.1)
+		text-shadow: $shadow-h2
+	&__white
+		color: $color-white
+
+.title-third
+	font-weight: 700
+	font-size: 2rem
+	letter-spacing: .2rem
+	text-transform: uppercase
+	@include respond(tab-land)
+			font-size: 1.8rem
+	@include respond(tab-port)
+			font-size: 2rem
+
+.paragraph
+	font-size: $fzp
+	font-weight: 400
+	letter-spacing: 0.2rem
+	@include respond(tab-land)
+			font-size: 1.5rem
+	@include respond(tab-port)
+			font-size: $fzp

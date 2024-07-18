@@ -1,0 +1,36 @@
+.composition
+	position: relative
+	&__photo
+		width: 55%
+		box-shadow: $box-shadow
+		border-radius: .6rem
+		position: absolute
+		z-index: 10
+		transition: all .3s
+		outline-offset: .7rem
+		&_n1
+			top: 0
+			left: 2rem
+			@include respond(tab-land)
+				top: 4rem
+
+		&_n2
+			top: 4rem
+			right: 0
+			@include respond(tab-land)
+				top: 8rem
+
+			
+		&_n3
+			left: 6rem
+			top: 15rem
+			@include respond(tab-land)
+				top: 14rem
+
+		&:hover
+			outline: .9rem solid $color-brown-light
+			transform: scale(1.1)
+			z-index: 20
+	&:hover &__photo:not(:hover)
+		transform: scale(.95)
+		

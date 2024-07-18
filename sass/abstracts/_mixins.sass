@@ -1,0 +1,27 @@
+//Шаблон для ссылки
+@mixin style-link($color)
+	display: inline-block
+	text-transform: uppercase
+	text-decoration: none
+	color: $color
+
+@mixin clearfix
+	&::after
+		content: ""
+		display: table
+		clear: both
+
+@mixin respond($point)
+	@if $point == phone
+		@media (max-width: 600px)
+			@content
+	@if $point == tab-port
+		@media (max-width: 900px)
+			@content
+	@if $point == tab-land
+		@media (max-width: 1240px)
+			@content
+	@if $point == big-screen
+		@media (min-width: 1800px)
+			@content
+			

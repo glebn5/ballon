@@ -1,0 +1,92 @@
+.card-tour
+	height: 52rem
+	perspective: 150rem
+	-webkit-perspective: 150rem
+	position: relative
+
+	&__side
+		height: 52rem
+		transition: .9s all ease-out
+		color: white
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		backface-visibility: hidden
+		box-shadow: $box-shadow
+		border-radius: 1rem
+		overflow: hidden
+
+		&_back
+			background: linear-gradient(120deg, $color-brown-light, $color-brown-dark)
+			transform: rotateY(180deg)
+			position: relative
+	&:hover &__side_front
+		transform: rotateY(-180deg)
+	&:hover &__side_back
+		transform: rotateY(0deg)
+
+	&__img
+		&_1
+			background: $color-brown-light url('../img/card-1.jpg') center / cover no-repeat
+		&_2
+			background: $color-brown-light url('../img/card-2.jpg') center / cover no-repeat
+		&_3
+			background: $color-brown-light url('../img/card-3.jpg') center / cover no-repeat
+		height: 22rem
+		background-blend-mode: hard-light
+		clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%)
+		margin-bottom: 6rem
+	&__title
+		font-size: 2.8rem
+		letter-spacing: .2rem
+		font-weight: 300
+		text-transform: uppercase
+		color: $color-white
+		text-align: right
+		position: absolute
+		top: 18rem
+		right: 0rem
+	&__span
+		background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
+		padding: 1rem 2rem .5rem
+		position: relative
+		&_2
+			position: absolute
+			top: 3.5rem
+			right: 0rem
+	&__descr
+		ul
+			list-style: none
+			margin: 0 auto
+			li
+				font-size: $fzp
+				font-weight: 600
+				letter-spacing: .2rem
+				color: $color-gray
+				text-decoration: underline $color-gray
+				text-align: center
+				&:not(:last-child)
+					margin-bottom: 2rem
+				@include respond(tab-land)
+					font-size: 1.5rem
+	&__backSide-box
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__text
+		color: $color-white
+		letter-spacing: .2rem
+		text-transform: uppercase
+		text-align: center
+		&:not(:last-child)
+			margin-bottom: 8.7rem
+		&_1
+			font-size: $fzp
+			font-weight: 300
+
+		&_2
+			font-size: 6rem
+			font-weight: 700
+			
