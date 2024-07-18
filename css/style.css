@@ -342,7 +342,7 @@ body {
 }
 @media (max-width: 900px) {
   .adventure-card {
-    width: 60rem;
+    width: 58rem;
     padding: 2rem;
   }
 }
